@@ -7,7 +7,7 @@ For testing the deploy, I'm using using mesos/marathon.
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/JeffDeCola/hello-go-deploy-aws)](https://goreportcard.com/report/github.com/JeffDeCola/hello-go-deploy-aws)
 [![GoDoc](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-aws?status.svg)](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-aws)
-[![Maintainability](https://api.codeclimate.com/v1/badges/???????????????????/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-aws/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2376dd13414c817f97b4/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-aws/maintainability)
 [![Issue Count](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-aws/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-aws/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
