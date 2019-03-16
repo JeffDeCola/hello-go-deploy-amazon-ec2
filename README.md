@@ -12,7 +12,7 @@ For testing the deploy, I'm using using mesos/marathon.
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
 `hello-go-deploy-aws` _uses Concourse CI to test, build, push (to DockerHub)
-and deploy a long running "hello-world" Docker Image to Amazon Web Services._
+and deploy a long running "hello-world" Docker Image to Amazon Web Services (aws)._
 
 I also have other repos showing different deployments,
 
@@ -44,8 +44,7 @@ To push a docker image you will need,
 
 To deploy to aws you will need,
 
-* [amazon web services (aws)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/amazon-web-services-cheat-sheet),
-
+* [amazon web services (aws)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/amazon-web-services-cheat-sheet)
 
 As a bonus, you can use Concourse CI to run the scripts,
 
