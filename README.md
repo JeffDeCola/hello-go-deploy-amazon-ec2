@@ -11,14 +11,16 @@ For testing the deploy, I'm using using mesos/marathon.
 [![Issue Count](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-aws/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-aws/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
-`hello-go-deploy-aws` _uses Concourse CI to test, build, push (to DockerHub)
-and deploy a long running "hello-world" Docker Image to Amazon Web Services (aws)._
+`hello-go-deploy-aws` _will test, build, push (to DockerHub) and deploy
+a long running "hello-world" Docker Image to Amazon Web Services (aws)._
 
 I also have other repos showing different deployments,
 
+* hello-go-deploy-aws
 * [hello-go-deploy-azure](https://github.com/JeffDeCola/hello-go-deploy-azure)
 * [hello-go-deploy-gae](https://github.com/JeffDeCola/hello-go-deploy-gae)
 * [hello-go-deploy-gce](https://github.com/JeffDeCola/hello-go-deploy-gce)
+* [hello-go-deploy-gke](https://github.com/JeffDeCola/hello-go-deploy-gke)
 * [hello-go-deploy-marathon](https://github.com/JeffDeCola/hello-go-deploy-marathon)
 
 The `hello-go-deploy-aws`
