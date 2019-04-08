@@ -60,11 +60,11 @@ cd "$GOPATH/dist"
 echo " "
 
 echo "cp the binary into /dist"
-cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-gce/bin/hello-go" .
+cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-amazon-ec2/bin/hello-go" .
 echo " "
 
 echo "cp the Dockerfile into /dist"
-cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-gce/build-push/Dockerfile" .
+cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-amazon-ec2/build-push/Dockerfile" .
 echo " "
 
 echo "Make it executable by all - chmod +x"
