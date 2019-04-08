@@ -1,5 +1,5 @@
 #!/bin/sh
-# hello-go-deploy-aws deploy.sh
+# hello-go-deploy-amazon-ec2 deploy.sh
 
 echo " "
 
@@ -23,7 +23,7 @@ echo " "
 
 # List whats in the app.json file
 echo "List whats in the app.json file"
-cat hello-go-deploy-aws/deploy/app.json
+cat hello-go-deploy-amazon-ec2/deploy/app.json
 echo " "
 
 echo "The concourse pipeline will put app.json to mesos/marathon"

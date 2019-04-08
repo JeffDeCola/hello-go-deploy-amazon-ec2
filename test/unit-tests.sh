@@ -1,5 +1,5 @@
 #!/bin/sh
-# hello-go-deploy-aws unit-test.sh
+# hello-go-deploy-amazon-ec2 unit-test.sh
 
 echo " "
 
@@ -16,7 +16,7 @@ else
     echo " "
 fi
 
-echo "cd up to /hello-go-deploy-aws directory"
+echo "cd up to /hello-go-deploy-amazon-ec2 directory"
 cd ..
 echo " "
 
