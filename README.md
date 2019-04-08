@@ -7,7 +7,7 @@ For testing the deploy, I'm using using mesos/marathon.
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/JeffDeCola/hello-go-deploy-amazon-ec2)](https://goreportcard.com/report/github.com/JeffDeCola/hello-go-deploy-amazon-ec2)
 [![GoDoc](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-amazon-ec2?status.svg)](https://godoc.org/github.com/JeffDeCola/hello-go-deploy-amazon-ec2)
-[![Maintainability](https://api.codeclimate.com/v1/badges/2376dd13414c817f97b4/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-amazon-ec2/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ce328e08ef7038607b16/maintainability)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-amazon-ec2/maintainability)
 [![Issue Count](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-amazon-ec2/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/hello-go-deploy-amazon-ec2/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
