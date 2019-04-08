@@ -2,7 +2,6 @@
 
 ```text
 *** THE DEPLOY IS UNDER CONSTRUCTION - CHECK BACK SOON ***
-For testing the deploy, I'm using using mesos/marathon.
 ```
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/JeffDeCola/hello-go-deploy-amazon-ec2)](https://goreportcard.com/report/github.com/JeffDeCola/hello-go-deploy-amazon-ec2)
@@ -157,21 +156,12 @@ This script runs the above commands
 This script runs the above commands in concourse
 [/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/build-push.sh).
 
-## STEP 4 - DEPLOY (TO AWS)
+## STEP 4 - DEPLOY
 
-Refer to my
-[aws cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/amazon-web-services-cheat-sheet),
-for more detailed information and a nice illustration.
-
-The goal is to deploy a ??? from a ???.
-
-There are ?? steps to deployment on aws,
-
-* tbd
-* tbd
+tbd
 
 This script ???
-[/aws-deploy/????.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/aws-deploy/???.sh).
+[/????.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/????.sh).
 
 Lastly, this script runs all of the above commands in concourse
 [/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/deploy.sh).
