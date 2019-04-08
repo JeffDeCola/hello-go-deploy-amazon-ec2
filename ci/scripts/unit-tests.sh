@@ -1,5 +1,5 @@
 #!/bin/sh
-# hello-go-deploy-aws unit-test.sh
+# hello-go-deploy-amazon-ec2 unit-test.sh
 
 echo " "
 
@@ -17,13 +17,13 @@ else
     echo " "
 fi
 
-echo "The goal is to set up a go src/github.com/JeffDeCola/hello-go-deploy-aws directory"
+echo "The goal is to set up a go src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2 directory"
 echo "Then tests will be run in that directory"
 echo "Test coverage results, text_coverage.txt, will be moved to /coverage-results directory"
 echo " "
 
 echo "At start, you should be in a /tmp/build/xxxxx directory with two folders:"
-echo "   /hello-go-deploy-aws"
+echo "   /hello-go-deploy-amazon-ec2"
 echo "   /coverage-results (created in task-unit-test.yml task file)"
 echo " "
 
@@ -38,14 +38,14 @@ echo "Setup the GOPATH based on current directory"
 export GOPATH=$PWD
 echo " "
 
-echo "Now we must move our code from the current directory ./hello-go-deploy-aws to" 
-echo "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-aws"
+echo "Now we must move our code from the current directory ./hello-go-deploy-amazon-ec2 to" 
+echo "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2"
 mkdir -p src/github.com/JeffDeCola/
-cp -R ./hello-go-deploy-aws src/github.com/JeffDeCola/.
+cp -R ./hello-go-deploy-amazon-ec2 src/github.com/JeffDeCola/.
 echo " "
 
-echo "cd src/github.com/JeffDeCola/hello-go-deploy-aws"
-cd src/github.com/JeffDeCola/hello-go-deploy-aws
+echo "cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2"
+cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2
 echo " "
 
 echo "Check that you are set and everything is in the right place for go:"
