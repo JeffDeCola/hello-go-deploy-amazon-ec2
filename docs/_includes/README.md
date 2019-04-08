@@ -30,7 +30,7 @@ To run from the command line,
 go run main.go
 ```
 
-Every 2 seconds `hello-go-deploy-aws` will print:
+Every 2 seconds `hello-go-deploy-amazon-ec2` will print:
 
 ```bash
 Hello everyone, count is: 1
@@ -48,10 +48,10 @@ go test -cover ./... | tee /test/test_coverage.txt
 ```
 
 This script runs the above command
-[/test/unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/test/unit-tests.sh).
+[/test/unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/test/unit-tests.sh).
 
 This script runs the above command in concourse
-[/ci/scripts/unit-test.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/scripts/unit-tests.sh).
+[/ci/scripts/unit-test.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/unit-tests.sh).
 
 ## STEP 2 - BUILD (DOCKER IMAGE)
 
@@ -76,7 +76,7 @@ Build your docker image from binary `hello-go`
 using `Dockerfile`,
 
 ```bash
-docker build -t jeffdecola/hello-go-deploy-aws .
+docker build -t jeffdecola/hello-go-deploy-amazon-ec2 .
 ```
 
 Obviously, replace `jeffdecola` with your DockerHub username.
@@ -87,19 +87,19 @@ Check your docker images on your machine,
 docker images
 ```
 
-It will be listed as `jeffdecola/hello-go-deploy-aws`
+It will be listed as `jeffdecola/hello-go-deploy-amazon-ec2`
 
 You can test your dockerhub image,
 
 ```bash
-docker run jeffdecola/hello-go-deploy-aws
+docker run jeffdecola/hello-go-deploy-amazon-ec2
 ```
 
 This script runs the above commands
-[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/build-push/build-push.sh).
+[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/build-push/build-push.sh).
 
 This script runs the above commands in concourse
-[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/scripts/build-push.sh).
+[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/build-push.sh).
 
 ## STEP 3 - PUSH (TO DOCKERHUB)
 
@@ -114,62 +114,51 @@ docker login
 Once logged in you can push,
 
 ```bash
-docker push jeffdecola/hello-go-deploy-aws
+docker push jeffdecola/hello-go-deploy-amazon-ec2
 ```
 
 Check you image at DockerHub. My image is located
-[https://hub.docker.com/r/jeffdecola/hello-go-deploy-aws](https://hub.docker.com/r/jeffdecola/hello-go-deploy-aws).
+[https://hub.docker.com/r/jeffdecola/hello-go-deploy-amazon-ec2](https://hub.docker.com/r/jeffdecola/hello-go-deploy-amazon-ec2).
 
 This script runs the above commands
-[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/build-push/build-push.sh).
+[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/build-push/build-push.sh).
 
 This script runs the above commands in concourse
-[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/scripts/build-push.sh).
+[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/build-push.sh).
 
-## STEP 4 - DEPLOY (TO MARATHON)
+## STEP 4 - DEPLOY
 
-Lets pull the `hello-go-deploy-aws` docker image
-from DockerHub and deploy to mesos/marathon.
+tbd
 
-This is actually very simple, you just PUT the
-[/deploy/app.json](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/deploy/app.json)
-file to mesos/marathon. This json file tells marathon what to do.
+This script ???
+[/????.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/????.sh).
 
-```bash
-curl -X PUT http://10.141.141.10:8080/v2/apps/hello-go-long-running \
--d @app.json \
--H "Content-type: application/json"
-```
-
-This script runs the above commands
-[/deploy/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/deploy/deploy.sh).
-
-This script runs the above commands in concourse
-[/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/scripts/deploy.sh).
+Lastly, this script runs all of the above commands in concourse
+[/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/deploy.sh).
 
 ## TEST, BUILT, PUSH & DEPLOY USING CONCOURSE (OPTIONAL)
 
 For fun, I use concourse to automate the above steps.
 
-A pipeline file [pipeline.yml](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/pipeline.yml)
+A pipeline file [pipeline.yml](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/pipeline.yml)
 shows the entire ci flow. Visually, it looks like,
 
-![IMAGE - hello-go-deploy-aws concourse ci pipeline - IMAGE](pics/hello-go-deploy-aws-pipeline.jpg)
+![IMAGE - hello-go-deploy-amazon-ec2 concourse ci pipeline - IMAGE](pics/hello-go-deploy-amazon-ec2-pipeline.jpg)
 
 The `jobs` and `tasks` are,
 
 * `job-readme-github-pages` runs task
-  [readme-github-pages.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/scripts/readme-github-pages.sh).
+  [readme-github-pages.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/readme-github-pages.sh).
 * `job-unit-tests` runs task
-  [unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/scripts/unit-tests.sh).
+  [unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/unit-tests.sh).
 * `job-build-push` runs task
-  [build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/scripts/build-push.sh).
+  [build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/build-push.sh).
 * `job-deploy` runs task
-  [deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-aws/tree/master/ci/scripts/deploy.sh).
+  [deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/deploy.sh).
 
 The concourse `resources type` are,
 
-* `hello-go-deploy-aws` uses a resource type
+* `hello-go-deploy-amazon-ec2` uses a resource type
   [docker-image](https://hub.docker.com/r/concourse/git-resource/)
   to PULL a repo from github.
 * `resource-dump-to-dockerhub` uses a resource type
