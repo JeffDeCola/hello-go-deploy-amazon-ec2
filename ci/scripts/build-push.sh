@@ -42,8 +42,8 @@ mkdir -p src/github.com/JeffDeCola/
 cp -R ./hello-go-deploy-amazon-ec2 src/github.com/JeffDeCola/.
 echo " "
 
-echo "cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-amazon-ec2"
-cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-amazon-ec2
+echo "cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01"
+cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01
 echo " "
 
 echo "Check that you are set and everything is in the right place for go:"
@@ -60,11 +60,11 @@ cd "$GOPATH/dist"
 echo " "
 
 echo "cp the binary into /dist"
-cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-amazon-ec2/bin/hello-go" .
+cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01/bin/hello-go" .
 echo " "
 
 echo "cp the Dockerfile into /dist"
-cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-amazon-ec2/build-push/Dockerfile" .
+cp "$GOPATH/src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01/build-push/Dockerfile" .
 echo " "
 
 echo "Make it executable by all - chmod +x"
