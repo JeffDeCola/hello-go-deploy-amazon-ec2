@@ -52,14 +52,18 @@ To push a docker image you will need,
 
 To deploy to aws you will need,
 
-* [amazon web services (aws)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/infrastructure-as-a-service/cloud-services-compute/amazon-web-services-cheat-sheet)
+* [amazon web services (aws)](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/service-architectures/infrastructure-as-a-service/cloud-services/amazon-web-services-cheat-sheet)
 
 As a bonus, you can use Concourse CI to run the scripts,
 
 * [concourse](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations-tools/continuous-integration-continuous-deployment/concourse-cheat-sheet)
   (Optional)
 
-## RUN
+## EXAMPLES
+
+This repo may show a few examples. We will deploy example 1.
+
+### EXAMPLE 1
 
 To run from the command line,
 
@@ -84,11 +88,9 @@ Lets unit test the code,
 go test -cover ./... | tee /test/test_coverage.txt
 ```
 
-This script runs the above command
-[/test/unit-tests.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/test/unit-tests.sh).
-
-This script runs the above command in concourse
-[/ci/scripts/unit-test.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/unit-tests.sh).
+There is a `unit-tests.sh` script to run the unit tests.
+There is also a script in the /ci folder to run the unit tests
+in concourse.
 
 ## STEP 2 - BUILD (DOCKER IMAGE)
 
@@ -132,11 +134,9 @@ You can test your dockerhub image,
 docker run jeffdecola/hello-go-deploy-amazon-ec2
 ```
 
-This script runs the above commands
-[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/build-push/build-push.sh).
-
-This script runs the above commands in concourse
-[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/build-push.sh).
+There is a `build-push.sh` script to build and push to DockerHub.
+There is also a script in the /ci folder to build and push
+in concourse.
 
 ## STEP 3 - PUSH (TO DOCKERHUB)
 
@@ -148,7 +148,7 @@ If you are not logged in, you need to login to dockerhub,
 docker login
 ```
 
-Once logged in you can push,
+Once logged in you can push to DockerHub
 
 ```bash
 docker push jeffdecola/hello-go-deploy-amazon-ec2
@@ -157,21 +157,13 @@ docker push jeffdecola/hello-go-deploy-amazon-ec2
 Check you image at DockerHub. My image is located
 [https://hub.docker.com/r/jeffdecola/hello-go-deploy-amazon-ec2](https://hub.docker.com/r/jeffdecola/hello-go-deploy-amazon-ec2).
 
-This script runs the above commands
-[/build-push/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/build-push/build-push.sh).
-
-This script runs the above commands in concourse
-[/ci/scripts/build-push.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/build-push.sh).
+There is a `build-push.sh` script to build and push to DockerHub.
+There is also a script in the /ci folder to build and push
+in concourse.
 
 ## STEP 4 - DEPLOY
 
 tbd
-
-This script ???
-[/????.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/????.sh).
-
-Lastly, this script runs all of the above commands in concourse
-[/ci/scripts/deploy.sh](https://github.com/JeffDeCola/hello-go-deploy-amazon-ec2/tree/master/ci/scripts/deploy.sh).
 
 ## TEST, BUILT, PUSH & DEPLOY USING CONCOURSE (OPTIONAL)
 
