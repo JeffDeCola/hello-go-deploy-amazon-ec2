@@ -11,7 +11,7 @@
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
 `hello-go-deploy-amazon-ec2` _will test, build, push (to DockerHub) and deploy
-a long running "hello-world" Docker Image to Amazon Web Services (aws)._
+a long running "hello-world" Docker Image to Amazon Elastic Compute Cloud (ec2)._
 
 I also have other repos showing different deployments,
 
