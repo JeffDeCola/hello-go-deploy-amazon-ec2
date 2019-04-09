@@ -61,7 +61,7 @@ As a bonus, you can use Concourse CI to run the scripts,
 
 ## EXAMPLES
 
-This repo may show a few examples. We will deploy example 1.
+This repo may have a few examples. We will deploy example 1.
 
 ### EXAMPLE 1
 
