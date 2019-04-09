@@ -42,7 +42,7 @@ mkdir -p src/github.com/JeffDeCola/
 cp -R ./hello-go-deploy-amazon-ec2 src/github.com/JeffDeCola/.
 echo " "
 
-echo "cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-gce"
+echo "cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-amazon-ec2"
 cd src/github.com/JeffDeCola/hello-go-deploy-amazon-ec2/example-01-amazon-ec2
 echo " "
 
